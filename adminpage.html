@@ -1,0 +1,138 @@
+<html>
+<head>
+<style>
+div.a {
+  position: absolute;
+  left:400px;
+  width: 400px;
+  height: 200px;
+ 
+}
+
+div.b {
+  position: absolute;
+  left: 800px;
+  width: 400px;
+  height: 200px;
+  
+} 
+
+div.c {
+  position: absolute;
+  left: 1200px;
+  width: 400px;
+  height: 200px;
+} 
+div.c {
+  position: absolute;
+  left: 1200px;
+  width: 400px;
+  height: 200px;
+} div.d {
+  position: absolute;
+  left: 1700px;
+  width: 500px;
+  height: 500px;
+} 
+.button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 5px 3px;
+  cursor: pointer;
+}
+
+img.bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+</style>
+</head>
+<body   bgcolor="#E6E6FA"> 
+        <p align="center"><b> Select your Operation on </b></p>
+
+
+ <img src="images/openbook.jpeg" class="bg" />
+  <div class="centered">Welcome Librarian</div>
+<div class="d"><p style="color:black; font-size:200%"><a href="logout.php" class="button1">Logout</a></p>
+</div>
+<!-- <p style="text-align:center;"><img align="justify" src="images/openbook.jpeg" alt="avatar" margin-left:150px  ></p> -->
+ 
+<div class="a"> <form method="POST" action="ss.php">
+	<button type="submit" class="button"><font size="3">Add Student</font></button>
+	</form>
+
+<form method="POST" action="sturem.php">
+	<button type="submit" class="button">Remove Student</button>
+		</form>
+
+<form method="POST" action="studentdetail.php">
+	<button type="submit" class="button">Students Record</button>
+	</form>
+<form method="POST" action="adminb.php">
+	<button type="submit" class="button">Students issued Book Record</button>
+	</form>
+</div>
+<div class="b"><form method="POST" action="facedit.php">
+	<button type="submit" class="button">Add Faculty</button>
+	</form>
+
+<form method="POST" action="facrmv.php">
+	<button type="submit" class="button">Remove Faculty</button>
+		</form>
+
+<form method="POST" action="facdetail.php">
+	<button type="submit" class="button">Faculty Records</button>
+	</form>
+<form method="POST" action="adminfac.php">
+	<button type="submit" class="button">Faculty Issued Book Record</button>
+	</form>
+</div>
+
+
+<div class="c"><form method="POST" action="addbooks.php">
+	<button type="submit" class="button">Add New Books</button>
+	</form>
+
+<form method="POST" action="booksrem.php">
+	<button type="submit" class="button">Remove Books From Record</button>
+	</form>
+
+ <form method="POST" action="updatebooks.php">
+	<button type="submit" class="button">Update Books Record</button>
+	</form>
+<form method="POST" action="bookdetail.php">
+<button type="submit" class="button"> Books Record</button>
+	</form>
+
+
+</div>
+</body>
+</html>
+ 
