@@ -46,7 +46,7 @@ if(isset($_POST['id']))
 <body  bgcolor="#E6E6FA">		
 
   <form method="POST" action="#">
-  <p align="center"><b>ID: <input type="text" name="id" pattern="[0-9].{2,7}" required> </b></p>
+  <p align="center"><b>ID: <input type="number" name="id" required> </b></p>
 <p  align="center"><button type="submit" class="button">Submit</button></p>
 </form>
 </html>
