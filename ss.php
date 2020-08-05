@@ -76,15 +76,14 @@ if (mysqli_query($conn, $sql))
 </head>	
 
   <form method="POST" action="#">
-  <p align="center"><b>Roll no.: <input type="number" name="roll" required> </b></p>
-  <p align="center"><b>Username: <input type="text" name="user" required> </b></p>
-<p align="center"><b>Password: <input type="password" name="pass" required> </b></p>
-<p align="center"><b>Semester: <input type="number" name="sem" required> </b></p>
-<p align="center"><b>Department: <input type="text" name="dept" required> </b></p>
+  <p align="center"><b>Roll no.: <input type="text" name="roll" pattern="[0-9].{7}" required > </b></p>
+  <p align="center"><b>Username: <input type="text" name="user" pattern="[A-Za-z ]+" required> </b></p>
+<p align="center"><b>Password: <input type="text" name="pass" pattern="[A-Za-z0-9].{4,12}" required> </b></p>
+<p align="center"><b>Semester: <input type="text" name="sem" pattern="[0-9].{0}" required> </b></p>
+<p align="center"><b>Department: <input type="text" name="dept"  required> </b></p>
 <p  align="center"><button type="submit" class="button">Submit</button></p>
 </form>
 </html> 
-
 
 
 
