@@ -56,17 +56,17 @@ addbooks(isbn,title,author,edition,type,publisher,cost,copy) VALUES('$one','$two
 <body  bgcolor="#E6E6FA">		
 
   <form method="POST" action="#">
-  <p align="center"><b>ISBN: <input type="number" name="isbn" required /> </b></p>
-  <p align="center"><b>TITLE: <input type="text" name="title" required> </b></p>
-<p align="center"><b>AUTHOR: <input type="text" name="author" required> </b></p>
-<p align="center"><b>EDITION: <input type="number" name="edition" required> </b></p>
+  <p align="center"><b>ISBN: <input type="text" name="isbn" pattern="[0-9].{9,12}" required /> </b></p>
+  <p align="center"><b>TITLE: <input type="text" name="title" pattern="[A-Z a-z]+" required> </b></p>
+<p align="center"><b>AUTHOR: <input type="text" name="author" pattern="[A-Z a-z]+" required> </b></p>
+<p align="center"><b>EDITION: <input type="text" name="edition" pattern="[0-9].{0,1}" required> </b></p>
 <p align="center"><b>TYPE:<select name="type">
   <option value="T">T</option>
   <option value="R">R</option></select></b></p>
 
 <p align="center"><b>PUBLISHER: <input type="text" name="publisher" required> </b></p>
-<p align="center"><b>COST: <input type="number" name="cost" required> </b></p>
-<p align="center"><b>COPIES OF THE BOOK: <input type="number" name="copy" required> </b></p>
+<p align="center"><b>COST: <input type="text" name="cost" pattern="[0-9].{0,}" required> </b></p>
+<p align="center"><b>COPIES OF THE BOOK: <input type="text" name="copy" pattern="[0-9].{0,}" required> </b></p>
 <p  align="center"><button type="submit" class="button">Submit</button></p>
 </form>
 </html>
