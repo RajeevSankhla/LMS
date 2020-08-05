@@ -1,0 +1,15 @@
+Steps.................
+
+1. Install Xampp.
+
+2. Start the server.
+
+3. extract lms file.
+
+4. find lms-database.sql file and import database in phpmyadmin.
+
+5. put complete extracted folder in :c/xampp/htdocs.
+
+6. open any browser and check localhost.
+
+7. put the url : localhost/lms/login.php
