@@ -70,7 +70,7 @@ if(isset($_POST['isbn1']))
   OR
 </div> 
 
-  <p align="center"><b>1.Enter Book ISBN: <input type="number" name="isbn1" > </b></p>
+  <p align="center"><b>1.Enter Book ISBN: <input type="text" name="isbn1" pattern="[0-9].{9,12}" > </b></p>
 <p  align="center"><button type="submit" class="button">Submit</button></p>
 </form>
 </html>
