@@ -46,7 +46,7 @@ if(isset($_POST['roll']))
 <body  bgcolor="#E6E6FA">		
 
   <form method="POST" action="#">
-  <p align="center"><b>Roll no.: <input type="number" name="roll" required> </b></p>
+  <p align="center"><b>Roll no.: <input type="text" name="roll" pattern="[0-9].{7}" required> </b></p>
 <p  align="center"><button type="submit" class="button">Submit</button></p>
 </form>
 </html>
