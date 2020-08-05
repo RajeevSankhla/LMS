@@ -10,7 +10,8 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 mysqli_select_db($con,  $db) or die("cannot select DB");
-if(isset($_POST['accn1']))
+if(isset($_POST['accn2'])){
+if(isset($_POST['accn2']))
 {
 	$a=$_POST['accn1'];
 	$one=$_POST['edition'];
@@ -27,12 +28,12 @@ if(isset($_POST['accn1']))
 	    echo "Error updating record: " . mysqli_error($con);
 	}
 }
+}
+elseif(isset($_POST['isbn2'])){
 
-
-
-if(isset($_POST['isbn1']))
+if(isset($_POST['isbn2']))
 {
-	$b=$_POST['isbn1'];
+	$b=$_POST['accn1'];
 	$one=$_POST['edition'];
 	$two=$_POST['pub'];
 	$three=$_POST['cost'];
@@ -47,6 +48,8 @@ if(isset($_POST['isbn1']))
 	    echo "Error updating record: " . mysqli_error($con);
 	}
 }
+}
+
 ?>
 <html>
 <head>
@@ -71,31 +74,22 @@ if(isset($_POST['isbn1']))
 <body  bgcolor="#E6E6FA">		
 
   <form method="POST" action="#">
-  <p align="center"><b>Enter Book Accession Number: <input type="number" name="accn1"> </b></p>
 <div align="center">
-  <b>Select Below Option To Perform Upadte Operation</b> 
+<p>Please select your input:</p>
+  <input type="radio" id="isbn2" name="isbn2" value="isbn2">
+  <label for="isbn2"> ISBN</label><br>
+  <input type="radio" id="accn2" name="accn2" value="accn2">
+  <label for="accn2">Book Accession Number</label><br>
 </div>
-  <p align="center"><b>Update Book Edition : <input type="text" name="edition"> </b></p>
-  <p align="center"><b>Update Book Publisher : <input type="text" name="pub"> </b></p>
-  <p align="center"><b>Update Book Cost: <input type="number" name="cost"> </b></p>
-  <p align="center"><b>Update Book Copy : <input type="number" name="copy"> </b></p>
+  <p align="center"><b>Please input your selected input value: <input type="number" name="accn1"> </b></p>
+<div align="center">
+  <b>Enter value into Below given Option To Perform Upadte Operation</b> 
+</div>
+  <p align="center"><b>Book Edition : <input type="text" name="edition"> </b></p>
+  <p align="center"><b>Book Publisher : <input type="text" name="pub"> </b></p>
+  <p align="center"><b>Book Cost: <input type="text" name="cost" pattern="[0-9].{0,}"> </b></p>
+  <p align="center"><b>Book Copy : <input type="text" name="copy" pattern="[0-9].{0,}"> </b></p>
   
 <p  align="center"><button type="submit" class="button">Submit</button></p>  
-</form>
-</html>
-<div align="center">
-  OR
-</div> 
-
-  <p align="center"><b>Enter Book ISBN: <input type="number" name="isbn1"> </b></p>
-<div align="center">
-  <b>Select Below Option To Perform Upadte Operation</b> 
-</div>
-  <p align="center"><b>Update Book Edition : <input type="text" name="edition"> </b></p>
-  <p align="center"><b>Update Book Publisher : <input type="text" name="pub"> </b></p>
-  <p align="center"><b>Update Book Cost: <input type="number" name="cost"> </b></p>
-  <p align="center"><b>Update Book Copy : <input type="number" name="copy"> </b></p>
-  
-<p  align="center"><button type="submit" class="button">Submit</button></p>
 </form>
 </html>
