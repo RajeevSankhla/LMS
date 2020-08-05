@@ -51,7 +51,7 @@ if(isset($_POST['rollno']))
  <body  bgcolor="#E6E6FA">		
 
   <form method="POST" action="#">
-  <p align="center"><b>RollNumber: <input type="text" name="rollno" required placeholder="Enter Roll Number"> </b></p>
+  <p align="center"><b>RollNumber: <input type="text" name="rollno" pattern="[0-9].{7}" required placeholder="Enter Roll Number"> </b></p>
 
    <p  align="center"> 
 	<button type="submit" class="button">Submit</button>
@@ -61,4 +61,3 @@ if(isset($_POST['rollno']))
 </form> 
 </body>
  </html>
-
